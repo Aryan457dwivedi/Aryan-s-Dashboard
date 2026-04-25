@@ -23,7 +23,7 @@ export const projects = [
     problem:
       "Manual parking management creates operational bottlenecks — slow vehicle processing, inaccurate billing, and no real-time slot visibility for drivers or facility operators.",
     solution:
-      "A computer vision pipeline using OpenCV and Haar Cascade classifiers to detect vehicles and extract licence plates from live feeds via Tesseract OCR. Automated slot allocation, dynamic billing logic, and SMS-based digital receipts shipped end-to-end. Processing time reduced by ~80%.",
+      "A computer vision pipeline using OpenCV and Haar Cascade classifiers to detect vehicles and extract licence plates from live feeds via Tesseract OCR. Slot allocation, dynamic billing, and SMS-based digital receipts shipped end-to-end. Processing time reduced by ~80%.",
     tech: ["Python", "OpenCV", "Haar Cascade", "Tesseract OCR", "MySQL", "SMS API"],
     users: 820,
     requests: 14200,
@@ -36,9 +36,9 @@ export const projects = [
     n: 3,
     name: "DriveShaft",
     problem:
-      "The automotive aftermarket operates largely through unstructured, word-of-mouth networks. Car owners have no reliable way to discover vetted mechanics, source parts, or connect with a community — all in one place.",
+      "The automotive aftermarket operates largely through unstructured, word-of-mouth networks. Car owners have no reliable way to discover vetted mechanics, source parts, or engage with a community — all in one place.",
     solution:
-      "A full-stack community platform built on Next.js and Supabase, serving car owners, mechanics, and enthusiasts across distinct authenticated roles. Shipped a category-filtered parts marketplace, city-wise mechanic discovery with verified profiles and ratings, and a community forum with threaded discussions and solved-answer marking.",
+      "A full-stack community platform on Next.js and Supabase, serving car owners, mechanics, and enthusiasts across distinct authenticated roles. Shipped a category-filtered parts marketplace, city-wise mechanic discovery with verified profiles and ratings, and a community forum with threaded discussions and solved-answer marking.",
     tech: ["Next.js", "React", "Supabase", "PostgreSQL", "REST APIs"],
     users: 590,
     requests: 9800,
@@ -53,7 +53,7 @@ export const projects = [
     problem:
       "The majority of job applications are eliminated before human review — not on merit, but because resumes fail ATS parsing or lack alignment with the target role's keyword profile.",
     solution:
-      "An NLP pipeline that scores a submitted resume against a parsed job description, surfaces structural and lexical gaps, and returns prioritised improvement recommendations — all without requiring manual recruiter input.",
+      "An NLP pipeline that scores a submitted resume against a parsed job description, surfaces structural and lexical gaps, and returns prioritised improvement recommendations — without requiring manual recruiter input.",
     tech: ["Python", "spaCy", "FastAPI", "React"],
     users: 390,
     requests: 3210,
@@ -61,21 +61,55 @@ export const projects = [
     impact: "310h saved",
     active: true,
   },
+  {
+    id: 5,
+    n: 5,
+    name: "Lumora",
+    problem:
+      "Passive study methods — re-reading notes, highlighting text — produce poor long-term retention. Active recall and spaced repetition are demonstrably more effective, but applying them to arbitrary study material requires tooling most students don't have access to.",
+    solution:
+      "A PDF-to-flashcard engine powered by the Claude API. Users upload any document; the system extracts key concepts and generates structured, teacher-quality flashcards — not shallow AI summaries. An SM-2-inspired spaced repetition layer surfaces weak cards more frequently, adapting to individual performance over time.",
+    tech: ["Next.js", "React", "Tailwind CSS", "Claude API", "Vercel"],
+    users: 230,
+    requests: 4100,
+    accuracy: "Live at lumoradot.vercel.app",
+    impact: "Deployed",
+    active: true,
+    link: "https://lumoradot.vercel.app",
+  },
+  {
+    id: 6,
+    n: 6,
+    name: "Popup Blocker Pro",
+    problem:
+      "Most ad blockers are overbuilt, permission-heavy, and rely on Manifest V2 APIs that Chrome is actively deprecating. Users who want lightweight, transparent blocking without bloat have few credible options.",
+    solution:
+      "A Chrome extension built natively on Manifest V3. Network-level request interception blocks ads before they load. A live counter and badge reflect blocked requests in real time. A single toggle enables or disables blocking without a reload.",
+    tech: ["JavaScript", "Chrome Extensions API", "Manifest V3"],
+    users: 180,
+    requests: 22000,
+    accuracy: "Network-level blocking · MV3 native",
+    impact: "22k req blocked",
+    active: true,
+    link: "https://github.com/Aryan457dwivedi/popup-blocker-pro",
+  },
 ];
 
 export const performanceHighlights = [
   { label: "Blood Disease Predictor", value: "94% accuracy" },
   { label: "ParkTrackr — processing time", value: "↓ 80%" },
-  { label: "DriveShaft — deployment status", value: "Live" },
   { label: "Resume Analyzer — ATS match", value: "89%" },
+  { label: "Popup Blocker Pro — requests blocked", value: "22k" },
+  { label: "Lumora", value: "Live" },
+  { label: "DriveShaft", value: "Live" },
 ];
 
 export const growthData = {
   labels: ["Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr"],
-  values: [200, 420, 680, 980, 1450, 2100, 2800, 3040],
+  values: [200, 480, 820, 1200, 1800, 2400, 3000, 3450],
 };
 
 export const donutData = {
-  labels: ["Blood", "ParkTrackr", "DriveShaft", "Resume"],
-  values: [41, 27, 19, 13],
+  labels: ["Blood", "ParkTrackr", "DriveShaft", "Resume", "Lumora", "Blocker"],
+  values: [36, 24, 17, 11, 7, 5],
 };
