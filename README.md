@@ -1,4 +1,4 @@
-# Aryan Dwivedi — Portfolio Dashboard
+# Aryan Dwivedi — Dashboard
 
 A React portfolio dashboard with the warm minimal design system from the original HTML prototype.
 
