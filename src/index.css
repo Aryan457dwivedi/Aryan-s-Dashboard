@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-background-body: #D8D6CF;
+  --color-background-primary: #FAFAF8;
+  --color-background-secondary: #F3F2EE;
+  --color-background-tertiary: #E8E6DF;
+  --color-background-success: #EDF5EE;
+  --color-border-tertiary: rgba(0, 0, 0, 0.08);
+  --color-border-secondary: rgba(0, 0, 0, 0.13);
+  --color-border-primary: rgba(0, 0, 0, 0.28);
+  --color-text-primary: #1A1A18;
+  --color-text-secondary: #5C5B57;
+  --color-text-tertiary: #9A9890;
+  --color-text-success: #2E7D3A;
+  --border-radius-lg: 12px;
+  --border-radius-md: 7px;
+  --font-main: 'Geist', 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  --chart-grid: rgba(0, 0, 0, 0.04);
+  --chart-tick: #888780;
+  --chart-bar-bg: rgba(0, 0, 0, 0.07);
+  --chart-bar-border: rgba(0, 0, 0, 0.2);
+  --chart-line: #444441;
+}
+
+[data-theme="dark"] {
+  --color-background-body: #141413;
+  --color-background-primary: #1C1C1A;
+  --color-background-secondary: #242422;
+  --color-background-tertiary: #2A2A28;
+  --color-background-success: #1A2E1C;
+  --color-border-tertiary: rgba(255, 255, 255, 0.07);
+  --color-border-secondary: rgba(255, 255, 255, 0.12);
+  --color-border-primary: rgba(255, 255, 255, 0.25);
+  --color-text-primary: #EBEBEA;
+  --color-text-secondary: #A3A19B;
+  --color-text-tertiary: #5E5D59;
+  --color-text-success: #6DBF78;
+  --chart-grid: rgba(255, 255, 255, 0.04);
+  --chart-tick: #5E5D59;
+  --chart-bar-bg: rgba(255, 255, 255, 0.08);
+  --chart-bar-border: rgba(255, 255, 255, 0.15);
+  --chart-line: #A3A19B;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: var(--color-background-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.2s;
+}
+
+button {
+  font-family: var(--font-main);
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-secondary);
+  border-radius: 2px;
+}
